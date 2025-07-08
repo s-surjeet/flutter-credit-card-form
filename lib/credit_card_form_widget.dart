@@ -103,14 +103,7 @@ class _CreditCardFormState extends State<CreditCardForm> {
           onChanged: noop,
           suffixIcon: Padding(
             padding: const EdgeInsets.all(8),
-            child: widget.enableScanner == true && cardType == null
-                ? ScannerButton(
-                    controller: widget.controller,
-                    onChanged: widget.onChanged,
-                    scannerIcon: widget.scannerIcon,
-                    scanOptions: widget.scanOptions,
-                  )
-                : cardImage.render(),
+            child: cardImage.render(),
           ),
         ),
         // [card holder name]
