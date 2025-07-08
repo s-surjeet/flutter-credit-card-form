@@ -6,7 +6,7 @@ class CreditCardForm extends StatefulWidget {
   final bool? hideCardHolder;
   final bool? enableScanner;
   final Widget? scannerIcon;
-  final CardScanOptions? scanOptions;
+  // final CardScanOptions? scanOptions;
   final String? expiredDateLabel;
   final String? cvcLabel;
   final Widget? cvcIcon;
@@ -25,7 +25,7 @@ class CreditCardForm extends StatefulWidget {
     this.hideCardHolder = false,
     this.enableScanner = false,
     this.scannerIcon,
-    this.scanOptions,
+    // this.scanOptions,
     this.expiredDateLabel,
     this.cvcLabel,
     this.cvcIcon,
