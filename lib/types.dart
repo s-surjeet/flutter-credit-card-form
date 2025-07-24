@@ -123,6 +123,7 @@ class CardImage {
   const CardImage({
     this.img = 'credit_card.png',
     this.width = 30.0,
+    this.color = Colors.transparent,
   });
 
   Widget render() {
