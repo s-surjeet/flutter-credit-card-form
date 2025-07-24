@@ -118,6 +118,7 @@ class CardDataInputController extends ChangeNotifier {
 class CardImage {
   final String img;
   final double width;
+  final Color? color;
 
   const CardImage({
     this.img = 'credit_card.png',
@@ -129,6 +130,7 @@ class CardImage {
       'images/$img',
       package: 'credit_card_form',
       width: width,
+      color: color
     );
   }
 }

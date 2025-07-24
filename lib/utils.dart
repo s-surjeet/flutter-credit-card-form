@@ -1,5 +1,6 @@
 import 'package:credit_card_form/credit_card_form.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
 
 class CardExpirationFormatter extends TextInputFormatter {
   @override
@@ -56,6 +57,7 @@ class CardUtils {
         CardUtils.getCardTypeFrmNumber(input.replaceAll(' ', ''));
     String img = "";
     double imgWidth = 30.0;
+    Color? color;
     switch (cardType) {
       case CardType.master:
         img = 'brand_mastercard.png';
@@ -64,6 +66,7 @@ class CardUtils {
       case CardType.visa:
         img = 'brand_visa.png';
         imgWidth = 40.0;
+        color = Colors.white;
         break;
       case CardType.americanExpress:
         img = 'brand_amex.png';
@@ -96,7 +99,7 @@ class CardUtils {
         img = 'credit_card.png';
         break;
     }
-    return CardImage(img: img, width: imgWidth);
+    return CardImage(img: img, width: imgWidth, color: color);
   }
 
   static CardType? getCardTypeFrmNumber(String input) {
